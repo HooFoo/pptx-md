@@ -9,7 +9,7 @@ module PptxMd
     end
 
     def to_md
-      "#{@title.to_md} \n #{@text.to_md} \n--- \n"
+      "#{@title.to_md}\n#{@text.to_md}---\n"
     end
   end
 end

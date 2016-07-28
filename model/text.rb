@@ -12,7 +12,7 @@ module PptxMd
     end
 
     def to_md
-      @blocks.inject("") { |result, item| "#{result} #{item} \n" }
+      @blocks.inject("") { |result, item| "#{result}#{item}\n" }
     end
   end
 end
