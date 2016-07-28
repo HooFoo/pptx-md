@@ -8,6 +8,7 @@ class Slide
   end
 
   def to_md
-    "#{title} \n #{text} \n ---"
+    txt = @text.join "\n"
+    "#{@title} \n #{txt} \n--- \n"
   end
 end
