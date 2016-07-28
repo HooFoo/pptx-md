@@ -1,8 +1,8 @@
 class Text
 
-  attr :blocks
+  attr_accessor :blocks
 
-  def initialize array
+  def initialize array = []
     @blocks = array
   end
 

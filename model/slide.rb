@@ -3,12 +3,11 @@ class Slide
   attr_accessor :title
   attr_accessor :text
 
-  def initialize
-    @text = []
+  def to_pptx
+
   end
 
   def to_md
-    txt = @text.join "\n"
-    "#{@title} \n #{txt} \n--- \n"
+    "#{@title.to_md} \n #{@text.to_md} \n--- \n"
   end
 end

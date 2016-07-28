@@ -2,7 +2,7 @@ class Title
 
   attr :text
 
-  def initialize string
+  def initialize string = ''
     @text = string
   end
 

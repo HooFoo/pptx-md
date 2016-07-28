@@ -33,13 +33,15 @@ class Parser
 
   def self.parse_slide lines
     slide = Slide.new
+    text = Text.new
     lines.each do |l|
       if l.start_with? '#'
-        slide.title = l
+        slide.title = Title.new l
       elsif l != '---'
-        slide.text << l
+        text.blocks << l
       end
     end
+    slide.text = text
     return slide
   end
 end

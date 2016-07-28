@@ -27,10 +27,10 @@ class Main
     if output =~ /.+\.md/
       content = slides.inject(''){ |res,slide| res+slide.to_md}
       IO.write(output,content)
-    elsif input =~ /.+\.pptx/
-      slides = Parser.parse_pptx input
+    elsif output =~ /.+\.pptx/
+
     else
-      puts 'Incorrect input format.'
+      puts 'Incorrect output format.'
       exit
     end
 
