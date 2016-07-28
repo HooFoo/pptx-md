@@ -1,13 +1,15 @@
-class Slide
+module PptxMd
+  class Slide
 
-  attr_accessor :title
-  attr_accessor :text
+    attr_accessor :title
+    attr_accessor :text
 
-  def to_pptx
+    def to_pptx
 
-  end
+    end
 
-  def to_md
-    "#{@title.to_md} \n #{@text.to_md} \n--- \n"
+    def to_md
+      "#{@title.to_md} \n #{@text.to_md} \n--- \n"
+    end
   end
 end

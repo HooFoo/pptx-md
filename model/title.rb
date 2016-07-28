@@ -1,16 +1,18 @@
-class Title
+module PptxMd
+  class Title
 
-  attr :text
+    attr :text
 
-  def initialize string = ''
-    @text = string
-  end
+    def initialize string = ''
+      @text = string
+    end
 
-  def to_pptx
-    @text
-  end
+    def to_pptx
+      @text
+    end
 
-  def to_md
-    "\##{@text}"
+    def to_md
+      "\##{@text}"
+    end
   end
 end
