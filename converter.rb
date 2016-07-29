@@ -1,6 +1,9 @@
 require 'require_all'
+require 'powerpoint'
+
 require_all './model'
 require_all './util'
+
 module PptxMd
   class Main
     def self.main argv
@@ -29,7 +32,10 @@ module PptxMd
         IO.write(output, content)
       elsif output =~ /.+\.pptx/
         deck = Powerpoint::Presentation.new
-
+        slides.each do |slide|
+          deck.add_textual_slide slide.title.to_pptx, slide.text.to_pptx
+        end
+        deck.save output
       else
         puts 'Incorrect output format.'
         exit

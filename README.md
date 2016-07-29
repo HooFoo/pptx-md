@@ -1,5 +1,5 @@
 # pptx-md
-Before start you ned run 
+Before start you need run 
 ```
 gem install bundler
 bundle install
