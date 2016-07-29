@@ -40,10 +40,7 @@ module PptxMd
         puts 'Incorrect output format.'
         exit
       end
-
-      private
-
-
+      
     end
   end
 end
