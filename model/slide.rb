@@ -5,7 +5,7 @@ module PptxMd
     attr_accessor :text
 
     def to_pptx
-      #dummym becouse i don't need it, but interface is good
+      #dummy because i don't need it, but interface is good
     end
 
     def to_md
