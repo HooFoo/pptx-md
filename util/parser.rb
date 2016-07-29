@@ -8,7 +8,9 @@ module PptxMd
       presentation.slides.each do |slide|
         item = PptxMd::Slide.new
         item.title = PptxMd::Title.new slide.title
-        item.text = PptxMd::Text.new slide.content
+        #workaround. Gem detect title as content
+        blocks  = slide.content.select{|text| text != slide.title}
+        item.text = PptxMd::Text.new blocks
         result << item
       end
       return result
